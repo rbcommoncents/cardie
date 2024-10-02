@@ -43,6 +43,7 @@ Design a unlimited number of business or information cards about yourself, share
 > Cardie is currently in an open alpha. Things will be rapidly changing and bugs are to be expected.
 
 ## Hacktoberfest
+
 Happy Hacktoberfest! I hope that you find this project interesting and that some issues offer a good learning experience! Help of any kind would be greatly appreciated.
 
 - You can check out the [issues page](https://github.com/nfoert/issues) for anything that piques your interest, or you can check the [hacktoberfest tag](https://github.com/nfoert/cardie/issues?q=sort%3Aupdated-desc+is%3Aopen+label%3Ahacktoberfest) for specific issues I've selected for this Hacktoberfest.
@@ -82,7 +83,7 @@ python manage.py runserver
 
 Finally, navigate to `http://127.0.0.1:8000/admin` and log in using your new administrator account. Create a new `Server` object and be sure to configure the `ip` to be `http://127.0.0.1:8000`.
 
-##### Secure Alternative Solution
+##### Secure alternative solution for server
 
 Create a Server object manually in the Django Shell to avoid admin credentials being created in production environment.
 
@@ -97,6 +98,7 @@ Server.objects.create(ip='http://127.0.0.1:8000)
 To escape the shell just use ctrl + d keys.
 
 ### Additional steps for Production installation
+
 This depends on what server hosting provider you're using. However, there's a couple environment variables you need to set and there's a run command.
 
 Set the following global environment variables:
@@ -110,9 +112,11 @@ Set the following global environment variables:
 - `DATABASE_URL` -> `${db.DATABASE_URL}` (This works on DigitalOcean, this may not work on every hosting provider)
 
 ## To Do
+
 There's lots of things that need implemented or changed in this project. Please see [TODO.md](TODO.md).
 
 ## Contributing
+
 I'd love to see contributions to this project! Please check out the [issues](https://github.com/nfoert/cardie/issues) page to see what things currently need fixed or added.
 
 Additionally, check [TODO.md](TODO.md) for a rough todo list of things that need implemented, and the [wiki](https://github.com/nfoert/cardie/wiki) for some information on how to work with some of the existing systems.
