@@ -82,6 +82,20 @@ python manage.py runserver
 
 Finally, navigate to `http://127.0.0.1:8000/admin` and log in using your new administrator account. Create a new `Server` object and be sure to configure the `ip` to be `http://127.0.0.1:8000`.
 
+##### Secure Alternative Solution
+
+Create a Server object manually in the Django Shell to avoid admin credentials being created in production environment.
+
+```
+python manage.py shell
+```
+Inside the shell, create a Server instance:
+```
+from main.models import Server
+Server.objects.create(ip='http://127.0.0.1:8000)
+```
+To escape the shell just use ctrl + d keys.
+
 ### Additional steps for Production installation
 This depends on what server hosting provider you're using. However, there's a couple environment variables you need to set and there's a run command.
 
